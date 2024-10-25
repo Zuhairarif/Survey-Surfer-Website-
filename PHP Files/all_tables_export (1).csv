@@ -1,0 +1,122 @@
+"Table: adidas_survey"
+id,favorite_adidas_product,submission_time
+1,"Adidas UltraBoost","2024-06-15 09:15:51"
+2,"Adidas Superstar","2024-06-16 13:02:05"
+
+"Table: apple_company_survey"
+id,favorite_iPhone,submission_time
+1,"iPhone 13","2024-06-15 05:44:06.357404"
+2,"iPhone SE","2024-06-15 05:44:21.598733"
+3,"iPhone 13 Pro","2024-06-16 13:00:56.484219"
+4,"iPhone 13 Pro","2024-06-16 16:09:17.239744"
+5,"iPhone SE","2024-06-20 16:35:42.483827"
+6,"iPhone 13","2024-06-20 19:38:28.983590"
+7,"iPhone 13","2024-06-20 19:38:57.932963"
+8,"iPhone 13","2024-06-21 04:21:39.000000"
+9,"iPhone 13","2024-06-21 14:52:02.000000"
+10,"iPhone 13 Mini","2024-06-21 14:52:14.000000"
+11,"iPhone 13 Mini","2024-06-21 14:52:30.000000"
+12,"iPhone 13","2024-06-21 16:20:12.000000"
+13,"iPhone 13 Mini","2024-06-22 09:53:13.000000"
+14,"iPhone 13 Mini","2024-06-22 09:53:14.000000"
+
+"Table: colgate_survey"
+id,colgate_product,submission_time
+1,"Health care and industrial supplies","2024-06-15 08:37:52"
+2,"Leisure and sports equipment","2024-06-16 13:01:52"
+3,"Health care and industrial supplies","2024-06-20 19:39:43"
+4,"Food products","2024-06-22 06:34:39"
+
+"Table: cricket_survey"
+id,favorite_cricketer,submission_time
+1,Kohli,"2024-06-15 06:47:25.000000"
+2,Rhyna,"2024-06-16 13:01:40.000000"
+3,Shami,"2024-06-21 08:48:34.000000"
+4,Dhoni,"2024-06-22 07:08:56.000000"
+
+"Table: dell_company"
+id,favorite_dell_laptop,submission_time
+1,"Dell G3","2024-06-15 07:34:54"
+2,"Dell XPS 13","2024-06-16 11:06:01"
+3,"Dell Inspiron 15","2024-06-16 13:01:05"
+4,"Dell XPS 13","2024-06-16 13:01:08"
+5,"Dell G3","2024-06-16 13:03:05"
+6,"Dell Latitude 14","2024-06-16 19:18:30"
+7,"Dell XPS 13","2024-06-16 19:18:33"
+8,"Dell Latitude 14","2024-06-19 04:43:08"
+9,"Dell G3","2024-06-19 04:43:20"
+10,"Dell XPS 13","2024-06-21 08:48:16"
+11,"Dell XPS 13","2024-06-21 14:51:54"
+12,"Dell XPS 13","2024-06-21 16:10:27"
+13,"Dell XPS 13","2024-06-22 06:21:01"
+14,"Dell XPS 13","2024-06-22 06:21:02"
+15,"Dell XPS 13","2024-06-22 06:44:31"
+16,"Dell XPS 13","2024-06-22 06:53:12"
+17,"Dell XPS 13","2024-06-22 06:54:40"
+18,"Dell XPS 13","2024-06-22 07:09:36"
+
+"Table: disney_survey"
+id,favorite_disney_streaming,submission_time
+1,"Disney+ Bundle","2024-06-15 09:09:21"
+2,Hulu,"2024-06-16 09:19:53"
+3,ESPN+,"2024-06-16 09:21:35"
+4,"Disney+ Bundle","2024-06-16 11:06:32"
+5,Disney+,"2024-06-16 13:02:11"
+6,ESPN+,"2024-06-22 06:43:04"
+
+"Table: gaming_survey"
+id,favorite_playstation,submission_time
+1,"Playstation VR","2024-06-15 08:45:45"
+2,"Playstation 5","2024-06-16 13:02:37"
+3,"Playstation 5","2024-06-21 14:38:08"
+4,"Playstation 5","2024-06-21 14:38:17"
+
+"Table: sony_survey"
+id,favorite_headphone,submission_time
+1,"Sony WH-1000XM4","2024-06-15 08:59:18"
+2,"Sony MDR-ZX110","2024-06-16 12:59:10"
+3,"Sony WH-1000XM4","2024-06-16 13:02:22"
+4,"Sony WH-1000XM4","2024-06-16 13:02:24"
+
+"Table: toyota_survey"
+id,favorite_toyota_car,submission_time
+1,"Toyota Highlander","2024-06-15 09:04:53"
+2,"Toyota Prius","2024-06-16 13:02:30"
+3,"Toyota Highlander","2024-06-16 13:37:21"
+4,"Toyota RAV4","2024-06-21 08:49:48"
+
+"Table: users"
+"Full Name",Gmail,"Phone Number",Password,id
+"Zuhair Arif",zuhairarif1234@gmail.com,6394317905,$2y$10$VplxcXZ2wGZ21RlnsO1fU.sy/rpatX0J5qB95F0evlHT0dJKutJ1q,1
+"Zuhair Arif",zuhairarif1234@gmail.com,6394317905,$2y$10$GfnR2t3l2mXzJculXxBLc.xrWzUAjrS3s8DTQEcYmk83cL52jbqOS,2
+"Zuhair Arif",zuhairarif1234@gmail.com,6394317905,$2y$10$WgohWpdMK2.3fJp6VKO0z.dtuc3ETt7K5vg6oELSoebuBl5t2wE6y,3
+"Zuhair Arif",zuhairarif1234@gmail.com,6394317905,$2y$10$lQG0zqNGgXJqvOpwILGoWuq/MaK/sP.8CTNP4.AvCFnoPumx4Rhqy,4
+"Zuhair Arif",,8400011153,$2y$10$nn4WAKMywsVTaICshXmwsOU5r7K4MObDYH6meopE946JjwqeeEs9u,5
+zmkz,,729289209209,$2y$10$M7yMUvBFnAhnWBx8l/0cXeYQ7Sr41aZA4Nk7XxLutgQ46gDRmDhRu,6
+zmkz,,729289209209,$2y$10$3AjHOKYX15szROA3/YzYy.ZiOlg2Clv7bwo6Ic9xlwFHRCni7yXne,7
+Unknown,,9580602351,$2y$10$Qq3NU3Z9vXi0vDm0xrza.e0OcCky73Z.5B7ab8x96h8WUMyyH.WD.,8
+Unknown,,9580602351,$2y$10$R0BhzNvZM9EWpr/bssPjbOISj079Eh.MB4vbNfC1QEnBQf9/aH5Ge,9
+legend,,9117147714,$2y$10$TL/AMmjuoGkUddRTaqqdM.LW5qgQBsRM4zqZhv6C.JlOXaSGuDNlu,10
+legend,,9117147714,$2y$10$ev.IKZkmqKYbI70uSw4REer2rXSgVEOOWSzk9EwbKn5rVTAGdJfta,11
+ushba,,9369686749,$2y$10$yij5nf2C5GLHa5sdDmcTy.dSempulG/F1cUoC95NJN7eB09LgCk0S,12
+Abc,zuhairarif1234@gmail.com,,$2y$10$9rrcvJRMKFV5yG6YgGvpIeagwzsoPMttS3EYs4PSyX1xwlTW.8e0q,13
+abc,,97,$2y$10$ugRcm/MKAWHqvi7Q0jH/d.TUcKOCqpnVjxxz/C6tciCgMDpcHjNCu,14
+abc,,97,$2y$10$pE12wWUobQR0avXW/z2ZTuCM6sCYO8x3RFz/XxpwIv4pxFid2YQQ.,15
+abc,,97,$2y$10$LUwQDCnPUnwWi1xqWzsHZ.NsSD2pqogvnzQgVqOf64FJ76R8KHtoe,16
+"Zuhair Arif",,85000,$2y$10$uokzCsFRwaxGJabmRnNSneshLnjP.5E7RRIa.MkQLFHF6ptpT1kQG,17
+Abc,,8400011153,$2y$10$p/XTmiYGH4J/qNYlIcvd8uJNOiKbZ3O3jc6KwSp7aDEjiovC/p.nK,18
+Abc,,8400011153,$2y$10$Zc8wRs.oP222gD5nUqhjTeChcgVCY1ZJCX.1jFvHpEY12SDGDUWPK,19
+Abc,,8400011153,$2y$10$CAmYVtKoioIS9/UBVuORrukaFlfbtivT.NkmTQ4kbAcxbfV60KwJS,20
+zbc,zuhairarif1234@gmail.com,,$2y$10$GIx5wWWC9LdEtLesaOPDLeLNYMotjg/puunquL6EWpBFKEIaa6ciC,21
+abc,zuhairarif1234@gmail.com,,$2y$10$wd.PcG2OM4WXqNkSpqTbLuJJ4XpXuleixW1B8H780gML2PGACfWoK,22
+abc,zuhairarif1234@gmail.com,,$2y$10$15sbzkGiSbuEF.3yWl9jae2fjhzBaZCx83ZVql8UjRtzeGJXtB8Vi,23
+"Zuhair Arif",zuhairarif1234@gmail.com,,$2y$10$sFgPXa/6W5045SW9F/OMDu66iS5WPNtjdGtTS8zLQkPRERRWiQVwi,24
+abc,zuhairarif1234@gmail.com,,$2y$10$36Vm4hMh5LVlpmefNKSwfuMCYds/Z.kojlqV7ow6ORdhfNP3GJOe6,25
+abc,zuhairarif1234@gmail.com,,$2y$10$G3CJCSmVU0xz0eWXd9DlsOcawuHGmbEmqPQJ4sEgz6d5BZxbhkCPe,26
+"Zuhair Arif",zuhairarif1234@gmail.com,,$2y$10$K0pqHD5TUIgPAcgNSIdFU.mpDu0o1Vsy5NNSwzP7ggur8H9/I7yQO,27
+"Zuhair Arif",zuhairarif1234@gmail.com,,$2y$10$Y28s35CoC5ftTF8KzukhLuny9Hd.sm7VMQUY2aA9Mg8DaD9FoeZN6,28
+abc,zuhairarif1234@gmail.com,,$2y$10$KwUl2RQKrWgRQzzZlJAxJ.Kx43yVxJaj3HSl/aYAVhMQMrFuJdfoC,29
+"Zuhair Arif",,7,$2y$10$m9nbLU3DRrQAAS9NzbOswee9oK5BmAeT2fBnPKhBlI4GUdUYzAcya,30
+"Khan Shah Ahmed Shakir Abu Asim",shahahmed8286@gmail.com,,$2y$10$AdT6wq2IvwRqIvYGLbU4EuPa35H6cS0aSS52SIFIrkFvlOkym0TsG,31
+Laptop,,8201028,$2y$10$dk10iBG7m.s/GDYZjFQryeUjo2TB/FkJETMBXQuQMjsv6XKc/6g7q,32
+

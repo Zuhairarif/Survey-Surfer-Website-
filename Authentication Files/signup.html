@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Login Page</title>
+
+    <!-- Google Fonts for improved typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Google API for Google Sign-In -->
+    <meta name="google-signin-client_id" content="YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com">
+    
+    <style>
+        /* General Reset and Font */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        /* Container Styling */
+        .container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Logo Styling */
+        .logo img {
+            width: 80px;
+            margin-bottom: 20px;
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes bounce {
+            to {
+                transform: translateY(-10px);
+            }
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        /* Input Styling */
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+            outline: none;
+            border-color: #66a6ff;
+            box-shadow: 0 0 5px rgba(102, 166, 255, 0.5);
+        }
+
+        /* Submit Button Styling */
+        input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            background-color: #66a6ff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #89f7fe;
+        }
+
+        /* Google Login Button */
+        .g-signin2 {
+            width: 100%;
+            margin: 20px 0;
+            display: inline-block;
+        }
+
+        /* Sign Up Link */
+        h5 {
+            margin: 20px 0 10px;
+            font-weight: 400;
+        }
+
+        a {
+            color: #66a6ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #89f7fe;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Additional Enhancements */
+        .input-group {
+            position: relative;
+        }
+
+        .input-group input {
+            padding-left: 45px;
+        }
+
+        .input-group i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+        }
+
+        .or-divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .or-divider::before, .or-divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background-color: #ddd;
+        }
+
+        .or-divider::before {
+            margin-right: 10px;
+        }
+
+        .or-divider::after {
+            margin-left: 10px;
+        }
+
+        .or-divider p {
+            margin: 0;
+            font-weight: 600;
+            color: #666;
+        }
+
+        /* Adding subtle background effect */
+        .background-decor {
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            z-index: 1;
+            animation: rotate 10s infinite linear;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .background-decor-2 {
+            top: auto;
+            bottom: -100px;
+            left: auto;
+            right: -100px;
+        }
+
+        /* Error Message Styling */
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="background-decor"></div>
+    <div class="background-decor background-decor-2"></div>
+
+    <!-- Login Container -->
+    <div class="container">
+        <div class="logo">
+            <img src="https://via.placeholder.com/80" alt="Logo">
+        </div>
+        <h2>Create Your Account</h2>
+        <p>Welcome back! Please register your account to continue.</p>
+
+        <!-- Form -->
+        <form id="loginForm" action="login.php" method="post">
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="text" id="emailOrPhone" name="login" placeholder="Email or Phone Number" aria-label="Email or Phone Number" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" name="password" placeholder="Password" aria-label="Password" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" aria-label="Confirm Password" required>
+            </div>
+            <input type="submit" value="Sign Up">
+        </form>
+
+        <!-- Google Login Button -->
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="light"></div>
+
+        <!-- OR Divider -->
+        <div class="or-divider">
+            <p>OR</p>
+        </div>
+
+        <!-- Sign Up Option -->
+        <h5>Already have an account? <a href="login.html">Login</a></h5>
+
+        <!-- Error Message -->
+        <p class="error" id="errorMessage"></p>
+
+    </div>
+
+    <!-- Google API Script -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script>
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log("ID: " + profile.getId()); // Don't send this directly to the server!
+            console.log('Full Name: ' + profile.getName());
+            console.log('Given Name: ' + profile.getGivenName());
+            console.log('Family Name: ' + profile.getFamilyName());
+            console.log("Image URL: " + profile.getImageUrl());
+            console.log("Email: " + profile.getEmail());
+        }
+
+        // Form Validation
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var errorMessage = document.getElementById("errorMessage");
+
+            // Check if passwords match
+            if (password !== confirmPassword) {
+                errorMessage.textContent = "Passwords do not match!";
+                event.preventDefault();
+            }
+
+            // Check if email or phone number is present
+            var emailOrPhone = document.getElementById("emailOrPhone").value;
+            if (emailOrPhone.trim() === "") {
+                errorMessage.textContent = "Please provide an email or phone number!";
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

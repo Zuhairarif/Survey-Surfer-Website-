@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us | Survey Surfer</title>
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #000428;
+            background: linear-gradient(to right, #004e92, #000428);
+            color: #f4f4f4;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .heading {
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            color: #f39c12;
+            letter-spacing: 2px;
+        }
+
+        .section-intro {
+            font-size: 1.4rem;
+            margin-bottom: 4rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #dfe6e9;
+        }
+
+        /* Contact Information */
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .contact-card {
+            background-color: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 250px;
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #333;
+            position: relative;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto;
+            background-color: #f39c12;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-icon:hover {
+            background-color: #d35400;
+        }
+
+        .contact-icon img {
+            width: 50%;
+        }
+
+        .contact-title {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-details {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Icons with clickable links */
+        .contact-card a {
+            text-decoration: none;
+            display: block;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            background-color: #f39c12;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            background-color: #e67e22;
+        }
+
+        /* Animated background circles */
+        .bg-circle {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: rgba(243, 156, 18, 0.1);
+            z-index: -1;
+            animation: move 8s infinite alternate ease-in-out;
+        }
+
+        .bg-circle.small {
+            width: 150px;
+            height: 150px;
+            background: rgba(243, 156, 18, 0.05);
+            top: 10%;
+            left: 85%;
+        }
+
+        .bg-circle.large {
+            width: 400px;
+            height: 400px;
+            top: 60%;
+            left: -10%;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(30px, -30px);
+            }
+        }
+
+        /* Social media hover animation */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+
+        .social-icons a {
+            margin: 0 1rem;
+            display: block;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        .social-icons img {
+            width: 60px;
+            height: 60px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .heading {
+                font-size: 2.5rem;
+            }
+
+            .section-intro {
+                font-size: 1.2rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+            }
+
+            .bg-circle.large {
+                width: 250px;
+                height: 250px;
+            }
+
+            .bg-circle.small {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Contact Us</h1>
+        <p class="section-intro">We'd love to hear from you! Whether you're a business looking to collaborate or a user with feedback, feel free to reach out through the following channels:</p>
+
+        <div class="contact-info">
+            <!-- Email Card -->
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <img src="gmail-icon.png" alt="Gmail">
+                </div>
+                <div class="contact-title">Email</div>
+                <div class="contact-details">zuhairarif1234@gmail.com</div>
+                <a href="mailto:zuhairarif1234@gmail.com">Send Email</a>
+            </div>
+
+            <!-- WhatsApp Card -->
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <img src="whatsapp-icon.png" alt="WhatsApp">
+                </div>
+                <div class="contact-title">WhatsApp</div>
+                <div class="contact-details">+91 6394317905</div>
+                <a href="https://wa.me/916394317905" target="_blank">Message on WhatsApp</a>
+            </div>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="mailto:zuhairarif1234@gmail.com">
+                <img src="gmail-icon.png" alt="Gmail">
+            </a>
+            <a href="https://wa.me/916394317905" target="_blank">
+                <img src="whatsapp-icon.png" alt="WhatsApp">
+            </a>
+        </div>
+
+        <!-- Background Circles -->
+        <div class="bg-circle small"></div>
+        <div class="bg-circle large"></div>
+    </div>
+</body>
+</html>

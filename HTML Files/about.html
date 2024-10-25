@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us | Survey Surfer</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1E2A38, #283E51);
+            color: #f4f4f4;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .heading {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            background: -webkit-linear-gradient(45deg, #F2994A, #F2C94C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            color: #e3e3e3;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin: 2.5rem 0;
+            color: #F2994A;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #F2994A;
+            margin: 0.5rem auto 2rem;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+        }
+
+        .highlight {
+            color: #F2994A;
+            font-weight: bold;
+        }
+
+        /* Animation for scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Styling for images */
+        .image-section {
+            margin: 3rem 0;
+        }
+
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media(max-width: 768px) {
+            .heading {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .about-content {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container fade-in">
+        <h1 class="heading">About Survey Surfer</h1>
+        <p class="tagline">"You get the right answers when you ask the right questions"</p>
+
+        <div class="about-content">
+            <p>Welcome to <span class="highlight">Survey Surfer</span>, where we bridge the gap between companies and customers by asking the right questions to help businesses gain dynamic insights. We believe that <span class="highlight">data-driven decisions</span> are the key to business success, and we're here to provide the right tools for it.</p>
+            <p>Our platform enables companies to run <span class="highlight">customized surveys</span> and gather valuable feedback from real customers. Whether it's understanding product preferences, identifying challenges, or exploring new markets, Survey Surfer helps businesses uncover hidden opportunities.</p>
+        </div>
+
+        <div class="section-title">Our Approach</div>
+        <div class="about-content">
+            <p>We collaborate with one company in each domain to ensure <span class="highlight">exclusive insights</span> and maintain data authenticity. With our unique verification methods—including login credentials, phone numbers, and government IDs—we ensure that the feedback you receive is <span class="highlight">genuine and reliable</span>.</p>
+            <p>By offering rewards such as <span class="highlight">discounts and points</span> in partnership with platforms like Amazon and Flipkart, we incentivize real customer participation, ensuring quality and engagement in the surveys.</p>
+        </div>
+
+        <div class="section-title">Why Survey Surfer?</div>
+        <div class="about-content">
+            <p>Our mission is to <span class="highlight">help companies grow</span> by providing actionable insights. A single survey could unlock millions in potential profits by giving you the edge in customer satisfaction and product improvement.</p>
+            <p>Take, for example, the question: <span class="highlight">"Why don't you buy the Apple Watch Series 6?"</span> Through Survey Surfer, a company can discover that a significant percentage of users, say <span class="highlight">60%</span>, don't purchase it due to poor battery life. Based on this data, companies can <span class="highlight">improve their products</span> and increase revenue dramatically.</p>
+        </div>
+
+        <div class="section-title">Policies</div>
+        <div class="about-content">
+            <ul>
+                <li>Exclusive collaborations in each domain</li>
+                <li>Data shared dynamically and securely</li>
+                <li>Data authenticity ensured through verification</li>
+                <li>Partnerships with e-commerce platforms for participant incentives</li>
+                <li>Strict data protection policies to maintain trust and security</li>
+            </ul>
+        </div>
+
+        <div class="section-title">Our Vision</div>
+        <div class="about-content">
+            <p>At Survey Surfer, we envision a future where companies can make informed decisions with ease, based on real-time, authentic data. We aim to create a brand that stands for <span class="highlight">transparency, trust, and success</span> for all stakeholders involved.</p>
+        </div>
+
+        <!-- Image Placeholder -->
+        <div class="section-title">Our Journey in Pictures</div>
+        <div class="image-section">
+            <div class="image-container">
+                <!-- Add your images here -->
+                <img src="image1.jpg" alt="Survey Surfer Event 1">
+                <img src="image2.jpg" alt="Survey Surfer Event 2">
+                <img src="image3.jpg" alt="Survey Surfer Data Chart">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

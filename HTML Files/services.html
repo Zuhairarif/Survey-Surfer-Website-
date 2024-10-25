@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Our Services | Survey Surfer</title>
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #0F2027;
+            background: linear-gradient(135deg, #0F2027, #203A43, #2C5364);
+            color: #f4f4f4;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 3rem 0;
+        }
+
+        .heading {
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #f9ca24;
+        }
+
+        .section-intro {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #f7f7f7;
+        }
+
+        /* Cards Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #333;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background: #f9ca24;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-header img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .card-title {
+            font-size: 1.6rem;
+            text-align: center;
+            padding: 1.5rem 0;
+            background-color: #f9ca24;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .card-body p {
+            margin-bottom: 1rem;
+        }
+
+        .card-button {
+            display: inline-block;
+            background-color: #f39c12;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .card-button:hover {
+            background-color: #d35400;
+        }
+
+        /* Services section */
+        .section-title {
+            font-size: 2rem;
+            color: #f39c12;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #f39c12;
+            margin: 1rem auto 0;
+        }
+
+        /* Service Description */
+        .service-description {
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 3rem 0;
+            max-width: 900px;
+            color: #dfe6e9;
+            line-height: 1.8;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Scroll Animation */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 1s ease forwards;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Service CTA */
+        .cta {
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .cta-button {
+            padding: 1rem 2rem;
+            background-color: #f39c12;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #e67e22;
+        }
+
+        /* Hover effects for image in cards */
+        .card-header:hover img {
+            filter: brightness(0.8);
+            transition: filter 0.5s ease;
+        }
+
+        /* Responsive Design */
+        @media(max-width: 768px) {
+            .heading {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .service-description {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container fade-up">
+        <h1 class="heading">Our Services</h1>
+        <p class="section-intro">At Survey Surfer, we offer a range of services designed to give your company the insights you need to thrive in a competitive landscape. From customer feedback to market analysis, we provide actionable data that helps you make better business decisions.</p>
+
+        <!-- Services Section -->
+        <h2 class="section-title">What We Offer</h2>
+
+        <div class="services-grid">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-header">
+                    <img src="service1.jpg" alt="Customer Surveys">
+                </div>
+                <div class="card-title">Customer Surveys</div>
+                <div class="card-body">
+                    <p>Gain valuable feedback directly from your customers with tailored surveys that help you understand their needs, preferences, and pain points.</p>
+                    <a href="#" class="card-button">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-header">
+                    <img src="service2.jpg" alt="Market Analysis">
+                </div>
+                <div class="card-title">Market Analysis</div>
+                <div class="card-body">
+                    <p>Stay ahead of the curve with in-depth market analysis that provides insights into industry trends and helps identify growth opportunities.</p>
+                    <a href="#" class="card-button">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-header">
+                    <img src="service3.jpg" alt="Competitor Insights">
+                </div>
+                <div class="card-title">Competitor Insights</div>
+                <div class="card-body">
+                    <p>Understand what your competitors are doing right and where they fall short with our competitor analysis surveys that give you a competitive edge.</p>
+                    <a href="#" class="card-button">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <div class="card-header">
+                    <img src="service4.jpg" alt="Product Feedback">
+                </div>
+                <div class="card-title">Product Feedback</div>
+                <div class="card-body">
+                    <p>Ensure your products meet customer expectations by gathering feedback directly from users, enabling you to make informed product improvements.</p>
+                    <a href="#" class="card-button">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Section for Advanced Services -->
+        <h2 class="section-title">Advanced Services</h2>
+        <p class="service-description">Survey Surfer also offers advanced data collection methods and analytics, including sentiment analysis, predictive behavior modeling, and AI-driven insights. These services are designed for businesses looking to harness the full potential of customer feedback.</p>
+
+        <!-- Call to Action -->
+        <div class="cta">
+            <button class="cta-button">Get Started with Survey Surfer</button>
+        </div>
+    </div>
+</body>
+</html>

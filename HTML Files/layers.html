@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layers Clothing Survey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Raleway', sans-serif;
+            background: linear-gradient(90deg, #8A2BE2 0%, #BA55D3 100%);
+            color: #333; padding: 30px; min-height: 100vh; display: flex; justify-content: center; align-items: center; position: relative;
+        }
+        .survey-container {
+            background: #fff; max-width: 800px; width: 100%; padding: 40px; border-radius: 15px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); animation: slideIn 1s ease-in-out; position: relative; z-index: 10;
+        }
+        @keyframes slideIn { from { transform: translateY(-30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        .survey-header { text-align: center; margin-bottom: 40px; }
+        .survey-header h2 { font-size: 2.4rem; color: #8A2BE2; }
+        .survey-header p { font-size: 1.1rem; color: #666; }
+        .survey-question { margin-bottom: 30px; }
+        .survey-question label { font-size: 1.2rem; font-weight: 600; margin-bottom: 15px; display: block; }
+        .survey-question .options { margin-top: 10px; }
+        .survey-question .options label {
+            display: block; padding: 10px 15px; margin-bottom: 10px; background-color: #f7f7f7; border: 1px solid #ddd; border-radius: 10px; transition: all 0.3s ease; cursor: pointer;
+        }
+        .survey-question input[type="radio"] { display: none; }
+        .survey-question input[type="radio"]:checked + label {
+            background-color: #8A2BE2; color: #fff; border-color: #BA55D3; font-weight: 600;
+        }
+        .survey-question label:hover { background-color: #ffe6e6; border-color: #8A2BE2; }
+        .progress-bar { background-color: #ddd; border-radius: 30px; height: 10px; margin: 30px 0; }
+        .progress-bar div { height: 100%; width: 80%; background-color: #8A2BE2; border-radius: 30px; transition: width 0.4s ease-in-out; }
+        .survey-navigation { display: flex; justify-content: space-between; align-items: center; margin-top: 30px; }
+        .btn { padding: 12px 25px; border-radius: 30px; font-size: 1.1rem; cursor: pointer; transition: all 0.3s ease; }
+        .btn-primary { background-color: #8A2BE2; border: none; color: #fff; }
+        .btn-primary:hover { background-color: #BA55D3; }
+        .btn-secondary { background-color: #ddd; border: none; color: #555; }
+        .btn-secondary:hover { background-color: #bbb; }
+        @media (max-width: 768px) { .survey-container { padding: 20px; } .survey-header h2 { font-size: 2rem; } }
+    </style>
+</head>
+<body>
+    <div class="survey-container">
+        <div class="survey-header">
+            <h2>Layers Clothing Survey</h2>
+            <p>Your feedback will help us improve our products!</p>
+        </div>
+        <form action="submit-survey.php" method="POST">
+            <!-- Survey Question 1 -->
+            <div class="survey-question">
+                <label for="q1">1. Which feature of Layers clothing do you value most?</label>
+                <div class="options">
+                    <input type="radio" id="q1a" name="q1" value="Design" required>
+                    <label for="q1a">a) Design</label>
+                    <input type="radio" id="q1b" name="q1" value="Comfort">
+                    <label for="q1b">b) Comfort</label>
+                    <input type="radio" id="q1c" name="q1" value="Price">
+                    <label for="q1c">c) Price</label>
+                    <input type="radio" id="q1d" name="q1" value="Durability">
+                    <label for="q1d">d) Durability</label>
+                </div>
+            </div>
+            <!-- Survey Question 2 -->
+            <div class="survey-question">
+                <label for="q2">2. How would you rate the quality of Layers apparel?</label>
+                <div class="options">
+                    <input type="radio" id="q2a" name="q2" value="Excellent" required>
+                    <label for="q2a">a) Excellent</label>
+                    <input type="radio" id="q2b" name="q2" value="Good">
+                    <label for="q2b">b) Good</label>
+                    <input type="radio" id="q2c" name="q2" value="Average">
+                    <label for="q2c">c) Average</label>
+                    <input type="radio" id="q2d" name="q2" value="Poor">
+                    <label for="q2d">d) Poor</label>
+                </div>
+            </div>
+            <!-- Progress Bar -->
+            <div class="progress-bar">
+                <div style="width: 80%;"></div>
+            </div>
+            <!-- Survey Navigation -->
+            <div class="survey-navigation">
+                <button type="button" class="btn btn-secondary">Back</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

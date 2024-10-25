@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey Page | Survey Surfer</title>
+    <style>
+        /* Global reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #F0F0F0;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-top: 2rem;
+            color: #333;
+        }
+
+        .container {
+            width: 85%;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding-top: 2rem;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            height: 300px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(243, 156, 18, 0.3), rgba(241, 196, 15, 0.2));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card-content {
+            padding: 2rem;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .card-logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+            background-color: #f39c12;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+        }
+
+        .card-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-title {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .card:hover .card-title {
+            color: #e67e22;
+        }
+
+        .card-description {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        /* Gradient background effect for cards */
+        .gradient-background {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #f39c12, #e67e22);
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            .card-content {
+                padding: 1.5rem;
+            }
+
+            .card-logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .card-title {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Select a Company Survey</h1>
+    <div class="container">
+        <div class="card-grid">
+            <!-- Zebronics Card -->
+            <div class="card" onclick="window.location.href='zebronics-survey.html'">
+                <div class="card-content">
+                    <div class="card-logo">
+                        <img src="assets/zebronics-logo.png" alt="Zebronics Logo">
+                    </div>
+                    <div class="card-title">Zebronics</div>
+                    <div class="card-description">Explore surveys for Zebronics electronics.</div>
+                </div>
+                <div class="gradient-background"></div>
+            </div>
+
+            <!-- Lenskart Card -->
+            <div class="card" onclick="window.location.href='lenskart-survey.html'">
+                <div class="card-content">
+                    <div class="card-logo">
+                        <img src="lenskart-logo.png" alt="Lenskart Logo">
+                    </div>
+                    <div class="card-title">Lenskart</div>
+                    <div class="card-description">Surveys for eyewear trends and styles.</div>
+                </div>
+                <div class="gradient-background"></div>
+            </div>
+
+            <!-- Boat Card -->
+            <div class="card" onclick="window.location.href='boat-survey.html'">
+                <div class="card-content">
+                    <div class="card-logo">
+                        <img src="boat-logo.png" alt="Boat Logo">
+                    </div>
+                    <div class="card-title">Boat</div>
+                    <div class="card-description">Join the latest Boat audio product surveys.</div>
+                </div>
+                <div class="gradient-background"></div>
+            </div>
+
+            <!-- OneDelivery Card -->
+            <div class="card" onclick="window.location.href='oneDelivery.html'">
+                <div class="card-content">
+                    <div class="card-logo">
+                        <img src="onedelivery-logo.png" alt="OneDelivery Logo">
+                    </div>
+                    <div class="card-title">OneDelivery</div>
+                    <div class="card-description">Take part in OneDelivery service feedback surveys.</div>
+                </div>
+                <div class="gradient-background"></div>
+            </div>
+
+            <!-- Mivi Card -->
+            <div class="card" onclick="window.location.href='mivi.html'">
+                <div class="card-content">
+                    <div class="card-logo">
+                        <img src="mivi-logo.png" alt="Mivi Logo">
+                    </div>
+                    <div class="card-title">Mivi</div>
+                    <div class="card-description">Mivi tech gadgets survey at your fingertips.</div>
+                </div>
+                <div class="gradient-background"></div>
+            </div>
+
+            <!-- Noise Card -->
+            <div class="card" onclick="window.location.href='noise.html'">
+                <div class="card-content">
+                    <div class="card-logo">
+                        <img src="noise-logo.png" alt="Noise Logo">
+                    </div>
+                    <div class="card-title">Noise</div>
+                    <div class="card-description">Survey on Noise wearables and accessories.</div>
+                </div>
+                <div class="gradient-background"></div>
+            </div>
+
+            <!-- HRX Card -->
+            <div class="card" onclick="window.location.href='hrx.html'">
+                <div class="card-content">
+                    <div class="card-logo">
+                        <img src="hrx-logo.png" alt="HRX Logo">
+                    </div>
+                    <div class="card-title">HRX</div>
+                    <div class="card-description">Stay active with HRX fitness product surveys.</div>
+                </div>
+                <div class="gradient-background"></div>
+            </div>
+
+            <!-- Red Tape Card -->
+            <div class="card" onclick="window.location.href='redTape.html'">
+                <div class="card-content">
+                    <div class="card-logo">
+                        <img src="redtape-logo.png" alt="Red Tape Logo">
+                    </div>
+                    <div class="card-title">Red Tape</div>
+                    <div class="card-description">Red Tape apparel and footwear surveys.</div>
+                </div>
+                <div class="gradient-background"></div>
+            </div>
+
+            <!-- Layers Card -->
+            <div class="card" onclick="window.location.href='layers.html'">
+                <div class="card-content">
+                    <div class="card-logo">
+                        <img src="layers-logo.png" alt="Layers Logo">
+                    </div>
+                    <div class="card-title">Layers</div>
+                    <div class="card-description">Survey on the latest clothing from Layers.</div>
+                </div>
+                <div class="gradient-background"></div>
+            </div>
+
+            <!-- Overlays Clothing Card -->
+            <div class="card" onclick="window.location.href='overlays.html'">
+                <div class="card-content">
+                    <div class="card-logo">
+                        <img src="overlays-logo.png" alt="Overlays Clothing Logo">
+                    </div>
+                    <div class="card-title">Overlays Clothing</div>
+                    <div class="card-description">Surveys on premium clothing from Overlays.</div>
+                </div>
+                <div class="gradient-background"></div>
+            </div>
+
+            <!-- Lucidys Card -->
+            <div class="card" onclick="window.location.href='lucidys.html'">
+                <div class="card-content">
+                    <div class="card-logo">
+                        <img src="lucidys-logo.png" alt="Lucidys Logo">
+                    </div>
+                    <div class="card-title">Lucidys</div>
+                    <div class="card-description">Surveys on Lucidys tech innovations.</div>
+                </div>
+                <div class="gradient-background"></div>
+            </div>
+
+            <!-- Dunzo Card -->
+            <div class="card" onclick="window.location.href='dunzo.html'">
+                <div class="card-content">
+                    <div class="card-logo">
+                        <img src="dunzo-logo.png" alt="Dunzo Logo">
+                    </div>
+                    <div class="card-title">Dunzo</div>
+                    <div class="card-description">Feedback surveys for Dunzo delivery services.</div>
+                </div>
+                <div class="gradient-background"></div>
+            </div>
+
+            <!-- Mahindra Card -->
+            <div class="card" onclick="window.location.href='mahindra.html'">
+                <div class="card-content">
+                    <div class="card-logo">
+                        <img src="mahindra-logo.png" alt="Mahindra Logo">
+                    </div>
+                    <div class="card-title">Mahindra</div>
+                    <div class="card-description">Survey on Mahindra vehicles and innovations.</div>
+                </div>
+                <div class="gradient-background"></div>
+            </div>
+
+            <!-- Reliance Card -->
+            <div class="card" onclick="window.location.href='reliance.html'">
+                <div class="card-content">
+                    <div class="card-logo">
+                        <img src="reliance-logo.png" alt="Reliance Logo">
+                    </div>
+                    <div class="card-title">Reliance</div>
+                    <div class="card-description">Reliance industry surveys and feedback.</div>
+                </div>
+                <div class="gradient-background"></div>
+            </div>
+
+            <!-- Bajaj Card -->
+            <div class="card" onclick="window.location.href='bajaj.html'">
+                <div class="card-content">
+                    <div class="card-logo">
+                        <img src="bajaj-logo.png" alt="Bajaj Logo">
+                    </div>
+                    <div class="card-title">Bajaj</div>
+                    <div class="card-description">Feedback on Bajaj electronics and vehicles.</div>
+                </div>
+                <div class="gradient-background"></div>
+            </div>
+
+            <!-- Godrej Card -->
+            <div class="card" onclick="window.location.href='godrej.html'">
+                <div class="card-content">
+                    <div class="card-logo">
+                        <img src="godrej-logo.png" alt="Godrej Logo">
+                    </div>
+                    <div class="card-title">Godrej</div>
+                    <div class="card-description">Survey on Godrej appliances and services.</div>
+                </div>
+                <div class="gradient-background"></div>
+            </div>
+
+            <!-- Whirlpool Card -->
+            <div class="card" onclick="window.location.href='whirlpool.html'">
+                <div class="card-content">
+                    <div class="card-logo">
+                        <img src="whirlpool-logo.png" alt="Whirlpool Logo">
+                    </div>
+                    <div class="card-title">Whirlpool</div>
+                    <div class="card-description">Surveys on Whirlpool home appliances.</div>
+                </div>
+                <div class="gradient-background"></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

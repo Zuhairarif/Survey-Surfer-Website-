@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Restaurant Surveys | Survey Surfer</title>
+    <style>
+        /* Global reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f7f7f7;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin: 2rem 0;
+            color: #ff6f61;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .card:hover {
+            transform: rotateY(10deg);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background-color: #ff6f61;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-image img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            text-align: center;
+            background: linear-gradient(135deg, #ff6f61 0%, #ff9f43 100%);
+            color: #fff;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .card-description {
+            font-size: 1rem;
+            opacity: 0.85;
+        }
+
+        /* Button styling */
+        .card-button {
+            margin-top: 1rem;
+            padding: 0.8rem 1.6rem;
+            background-color: #fff;
+            color: #ff6f61;
+            border-radius: 50px;
+            border: none;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .card-button:hover {
+            background-color: #ff9f43;
+            color: #fff;
+        }
+
+        /* Animation for the button */
+        .card-button::before {
+            content: '→';
+            position: absolute;
+            right: 20px;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .card-button::before {
+            transform: translateX(10px);
+        }
+
+        /* Stylish gradient shadows */
+        .gradient-background {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #ff6f61, #ff9f43);
+        }
+
+        /* Hover 3D effect */
+        .card:hover .card-image img {
+            transform: rotateY(30deg) rotateX(15deg);
+            transition: transform 0.5s ease;
+        }
+
+        /* Floating card effect */
+        .card::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            width: 90%;
+            height: 20px;
+            background-color: rgba(255, 111, 97, 0.2);
+            transform: scale(0);
+            transition: transform 0.3s ease;
+            z-index: -1;
+        }
+
+        .card:hover::after {
+            transform: scale(1);
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .card-content {
+                padding: 1rem;
+            }
+
+            .card-title {
+                font-size: 1.5rem;
+            }
+
+            .card-description {
+                font-size: 0.9rem;
+            }
+
+            .card-button {
+                padding: 0.6rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Select a Restaurant Survey</h1>
+    <div class="container">
+        <div class="card-grid">
+            <!-- Hunger Hills Card -->
+            <div class="card" onclick="window.location.href='hungerHill.html'">
+                <div class="card-image">
+                    <img src="hungerhills-logo.png" alt="Hunger Hills Logo">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Hunger Hills</div>
+                    <div class="card-description">Explore customer feedback and service insights for Hunger Hills.</div>
+                    <button class="card-button">Start Survey</button>
+                </div>
+                <div class="gradient-background"></div>
+            </div>
+
+            <!-- Al Kabeer -->
+            <div class="card" onclick="window.location.href='alKabeer.html'">
+                <div class="card-image">
+                    <img src="delhibelly-logo.png" alt="Delhi Belly Logo">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Delhi Belly</div>
+                    <div class="card-description">Join surveys for Delhi Belly to improve their menu offerings.</div>
+                    <button class="card-button">Start Survey</button>
+                </div>
+                <div class="gradient-background"></div>
+            </div>
+
+            <!-- Javed Nihari Card -->
+            <div class="card" onclick="window.location.href='javedNihari.html'">
+                <div class="card-image">
+                    <img src="jawednihari-logo.png" alt="Jawed Nihari Logo">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Jawed Nihari</div>
+                    <div class="card-description">Provide feedback on the authentic flavors of Jawed Nihari.</div>
+                    <button class="card-button">Start Survey</button>
+                </div>
+                <div class="gradient-background"></div>
+            </div>
+
+            <!-- Delhi 6 -->
+            <div class="card" onclick="window.location.href='delhi6.html'">
+                <div class="card-image">
+                    <img src="jawednihari-logo.png" alt="Jawed Nihari Logo">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Jawed Nihari</div>
+                    <div class="card-description">Provide feedback on the authentic flavors of Jawed Nihari.</div>
+                    <button class="card-button">Start Survey</button>
+                </div>
+                <div class="gradient-background"></div>
+            </div>
+
+            <!-- Dua Raheem -->
+            <div class="card" onclick="window.location.href='duaRaheem.html'">
+                <div class="card-image">
+                    <img src="jawednihari-logo.png" alt="Jawed Nihari Logo">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Jawed Nihari</div>
+                    <div class="card-description">Provide feedback on the authentic flavors of Jawed Nihari.</div>
+                    <button class="card-button">Start Survey</button>
+                </div>
+                <div class="gradient-background"></div>
+            </div>
+
+            <!-- Sher-e-Punjab -->
+            <div class="card" onclick="window.location.href='sherePunjab.html'">
+                <div class="card-image">
+                    <img src="jawednihari-logo.png" alt="Jawed Nihari Logo">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Jawed Nihari</div>
+                    <div class="card-description">Provide feedback on the authentic flavors of Jawed Nihari.</div>
+                    <button class="card-button">Start Survey</button>
+                </div>
+                <div class="gradient-background"></div>
+            </div>
+
+
+            
+
+            <!-- Placeholder for more restaurants -->
+            <!-- You can add more restaurant cards here using the same structure -->
+            
+        </div>
+    </div>
+
+</body>
+</html>
